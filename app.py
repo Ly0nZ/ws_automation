@@ -13,3 +13,7 @@ def update_workbook(filename):
         new_cell.value = commission
     
     workbook.save(filename)
+
+path = Path("sales")
+for file in path.glob('*.xlsx'):
+    process_workbook(file)
